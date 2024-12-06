@@ -171,7 +171,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs16.x
       InlineCode: !Include { type: string, location: lambda/api.js }
       Timeout: 30
       Events:
@@ -195,7 +195,7 @@ Resources:
     Condition: HasAuthorizer
     Properties:
       Handler: index.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs16.x
       InlineCode: !Include { type: string, location: lambda/authorizer.js }
       Timeout: 30
       Environment:
